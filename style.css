@@ -2,8 +2,13 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: arial;
 }
 
 .hidden {
 	display: none;
+}
+
+span[end]{
+	margin-left: auto;
 }
