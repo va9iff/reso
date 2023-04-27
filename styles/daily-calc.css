@@ -1,0 +1,74 @@
+daily-calc table{
+	/*	background-color: red;*/
+	  border-collapse: collapse;
+	  margin: 30px 0 0 20px;
+}
+
+th {
+	padding-bottom: 14px;
+	opacity: 0.4;
+	font-weight: 400;
+}
+
+daily-calc td{
+	padding: 19px 14px;
+	padding-right: 70px;
+	text-align: center;
+	min-width: 100px;
+	font-weight: 400;
+	font-size: 19px;
+}
+
+daily-calc td[r]{
+	text-align: right
+}
+daily-calc td[l]{
+	text-align: left
+}
+
+
+daily-calc tr{
+	border-bottom: 1px solid #000;
+/*	box-shadow: 3px 2px solid #00f;*/
+/*border: 2px solid red;*/
+}
+
+daily-calc tr[active]{
+	background-color: #E7E7E7;
+
+}
+
+td[l]{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+daily-calc tr  td[l] span{
+	transition: 800ms;
+	padding: 0px 18px;
+	border-radius: 3px;
+}
+
+daily-calc tr[active]  td[l] span{
+	transition: 200ms;
+	background-color: #171717;
+	color: #eee;
+/*	width: 43px;*/
+/*	padding: 3px 18px;*/
+	padding: 0px 18px;
+/*	min-height: 32px;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+}
+
+
+.orderCheck{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	align-items: flex-start;
+}
