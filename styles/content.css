@@ -1,0 +1,10 @@
+.content{
+	margin-left: 227px;
+	transition: 200ms;
+}
+
+.content[sideMenuMinimized]{
+	margin-left: 0;
+	transition: 800ms;
+	padding-top: 90px;
+}
