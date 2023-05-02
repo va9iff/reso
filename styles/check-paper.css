@@ -4,6 +4,7 @@ check-paper{
 /*	position: absolute;*/
 	display: flex;
 	flex-direction: column;
+	min-width: 500px;
 /*	left: 700px;*/
 /*	background-color: #ee0;*/
 
@@ -22,6 +23,7 @@ border-radius: 12px;
 
 margin-top: 40px;
 margin-left: 20px;
+margin-right: 80px;
 
 
 }

@@ -48,6 +48,7 @@ food-menu>.categories>button{
 
 	width: 160px;
 	height: 160px;
+	flex-grow: 3;
 
 	background: #F9F9F9;
 	border: 1px solid #8C82A8;
@@ -81,7 +82,7 @@ food-menu>.categories>button[active]{
 	border: 3px solid #FFFFFF;
 	/*flex-grow: 0.5;*/
 /*	flex-grow: 0.3;*/
-	flex-grow: 1;
+	flex-grow: 5;
 	transform: scale(1.07);
 }
 
