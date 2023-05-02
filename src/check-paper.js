@@ -20,11 +20,11 @@ class CheckPaper extends VLitElement {
 				item => html`
 				<p>
 					${item.name} x${item.count}
-					<span end>${food(item.name).price * item.count}</span> <br>
+					<span end>${food(item.name).price * item.count}₼</span> <br>
 				</p>
 				`
 			)}
-			<u>Cəmi: ${12.80}man</u>
+			<u>Cəmi: ${12.80}₼</u>
 		`
 	}
 }

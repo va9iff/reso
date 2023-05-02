@@ -23,6 +23,7 @@ export const data = {
 				{name: "Ayran", count: 1}	
 				] },
 			{ num: 5, count: 8, total: 9.55, items: [
+				{name: "Lahmacum", count: 2},
 
 				] },
 			{ num: 4, count: 12, total: 18.23419, items: [
