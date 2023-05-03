@@ -17,7 +17,7 @@ class CheckPaper extends VLitElement {
 	}
 	render() {
 		return html`
-			<h3>${this.entry.num}№ Sifariş üçün hesab</h3>
+			<h3>${this.entry.num == "X" ? "Bugünlük" : this.entry.num + "№"} Sifariş${this.entry.num == "X" ? "lər" : ""} üçün Hesab</h3>
 			${this.entry.items.map(
 				item => html`
 				<p>
@@ -26,7 +26,7 @@ class CheckPaper extends VLitElement {
 				</p>
 				`
 			)}
-			<u total>Cəmi: ${12.80}₼</u>
+			<u total>Cəmi: ${this.entry.items.reduce((result, item)=>deci2(result + deci2(item.count*item.price)), 0)}₼</u>
 		`
 	}
 }
