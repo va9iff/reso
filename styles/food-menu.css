@@ -112,6 +112,8 @@ food-menu>.categories>button[active]:after{
 	font-weight: 400;
 	font-size: 18px;
 	padding: 0 45px;
+/*	overflow-y: scroll;*/
+/*	height: 200px; */ /*idea*/
 }
 
 .foodsList>p {

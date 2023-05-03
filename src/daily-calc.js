@@ -30,8 +30,8 @@ class DailyCalc extends VLitElement {
 								console.log(entry)
 							}}>
 								<td l><span>${entry.num}№</span></td>
-								<td>${entry.count}x</td>
-								<td r>${entry.amount}man</td>
+								<td>${entry.items.length}x</td>
+								<td r>${entry.items.reduce((result, item)=>result+item.count*item.price, 0)}₼</td>
 							</tr>
 						`
 					)}

@@ -7,13 +7,15 @@ class FoodMenu extends VLitElement{
 	}
 	constructor(){
 		super()
-		this.list = window.data.foods
+		// this.list = window.data.foods
+		this.list = []
 		this.currentCatagory = ""
 	}
 	filter(category){
 		if (category==this.currentCatagory){
 			this.currentCatagory = ""
-			this.list = window.data.foods
+			// this.list = window.data.foods
+			this.list = []
 			return
 		}
 		this.currentCatagory = category
@@ -30,7 +32,7 @@ class FoodMenu extends VLitElement{
 			<button @click = ${e=>this.filter("Desertlər")} ?active = ${this.currentCatagory == "Desertlər"}>Desertlər</button>
 		</div>
 		<div class="foodsList">
-			${this.list.map(food=>html`<p>${food.name} <span end>${food.price}</span>man</p>`)}
+			${this.list.map(food=>html`<p>${food.name} <span end>${food.price}</span>₼</p>`)}
 		</div>
 		`
 	}
