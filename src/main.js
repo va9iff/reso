@@ -38,7 +38,7 @@ class VMain extends VLitElement{
 	}
 	render(){
 		return html`
-		<side-menu ?minimized = ${this.sideBarMinimized}></side-menu>
+		<side-menu ?minimized = ${this.sideBarMinimized} .active = ${this.active}></side-menu>
 		<div class="content" ?sideMenuMinimized=${this.sideBarMinimized}>
 			${sideTabs[this.active]()}
 		</div>

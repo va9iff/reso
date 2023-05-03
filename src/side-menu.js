@@ -1,6 +1,9 @@
 import {VLitElement, html, classMap} from './vlit.js';
 
 class SideMenu extends VLitElement{
+	static properties = {
+		active: {},
+	}
 	sideBarActivate(tabName){
 		window.V.active = tabName
 		this.requestUpdate()
@@ -8,12 +11,12 @@ class SideMenu extends VLitElement{
 	render(){
 		return html`
 			<h3 ?hidden=${window.V.sideBarMinimized}>Vsys</h3>
-			<button @click=${e=>this.sideBarActivate("anaMenyu")} ?active = ${window.V.active=="anaMenyu"} ?hidden=${window.V.sideBarMinimized}>Ana menyu</button>
-			<button @click=${e=>this.sideBarActivate("bugun")} ?active = ${window.V.active=="bugun"} ?hidden=${window.V.sideBarMinimized} active>Bugün</button>
-			<button @click=${e=>this.sideBarActivate("sifaris")} ?active = ${window.V.active=="sifaris"} ?hidden=${window.V.sideBarMinimized}>Sifariş</button>
-			<button @click=${e=>this.sideBarActivate("tarixce")} ?active = ${window.V.active=="tarixce"} ?hidden=${window.V.sideBarMinimized}>Tarixçə</button>
-			<button @click=${e=>this.sideBarActivate("yemekElavesi")} ?active = ${window.V.active=="yemekElavesi"} ?hidden=${window.V.sideBarMinimized}>Yemək əlavəsi</button>
-			<button @click=${e=>this.sideBarActivate("adminMenyu")} ?active = ${window.V.active=="adminMenyu"} ?hidden=${window.V.sideBarMinimized}>Admin menyu</button>
+			<button @click=${e=>this.sideBarActivate("anaMenyu")} ?active = ${this.active=="anaMenyu"} ?hidden=${window.V.sideBarMinimized}>Ana menyu</button>
+			<button @click=${e=>this.sideBarActivate("bugun")} ?active = ${this.active=="bugun"} ?hidden=${window.V.sideBarMinimized} active>Bugün</button>
+			<button @click=${e=>this.sideBarActivate("sifaris")} ?active = ${this.active=="sifaris"} ?hidden=${window.V.sideBarMinimized}>Sifariş</button>
+			<button @click=${e=>this.sideBarActivate("tarixce")} ?active = ${this.active=="tarixce"} ?hidden=${window.V.sideBarMinimized}>Tarixçə</button>
+			<button @click=${e=>this.sideBarActivate("yemekElavesi")} ?active = ${this.active=="yemekElavesi"} ?hidden=${window.V.sideBarMinimized}>Yemək əlavəsi</button>
+			<button @click=${e=>this.sideBarActivate("adminMenyu")} ?active = ${this.active=="adminMenyu"} ?hidden=${window.V.sideBarMinimized}>Admin menyu</button>
 			<button @click=${e=>{
 				this.sideBarActivate("")
 			}} ?hidden = ${!window.V.active || window.V.sideBarMinimized || true}>Bağla</button>
