@@ -1,5 +1,7 @@
 import { html, VLitElement } from "./vlit.js"
 
+let deci2 = num => parseInt(num * 100) / 100
+
 import "./check-paper.js"
 class DailyCalc extends VLitElement {
 	static properties = {
@@ -31,7 +33,7 @@ class DailyCalc extends VLitElement {
 							}}>
 								<td l><span>${entry.num}№</span></td>
 								<td>${entry.items.length}x</td>
-								<td r>${entry.items.reduce((result, item)=>result+item.count*item.price, 0)}₼</td>
+								<td r>${entry.items.reduce((result, item)=>deci2(result+item.count*item.price), 0)}₼</td>
 							</tr>
 						`
 					)}

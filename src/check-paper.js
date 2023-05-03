@@ -4,6 +4,8 @@ console.log(window.data)
 let food = (foodName)=>window.data.foods[window.data.foods.map(food=>food.name).indexOf(foodName)]
 setTimeout(()=>console.log(food("Coca Cola")))
 
+let deci2 = num => parseInt(num * 100) / 100
+
 class CheckPaper extends VLitElement {
 	static properties = {
 		entry: {}, //
@@ -20,7 +22,7 @@ class CheckPaper extends VLitElement {
 				item => html`
 				<p>
 					${item.name} x${item.count}
-					<span end>${item.price * item.count}₼</span> <br>
+					<span end>${deci2(item.price * item.count)}₼</span> <br>
 				</p>
 				`
 			)}
