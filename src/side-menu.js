@@ -10,6 +10,7 @@ class SideMenu extends VLitElement{
 			<h3 ?hidden=${window.V.sideBarMinimized}>Vsys</h3>
 			<button @click=${e=>this.sideBarActivate("anaMenyu")} ?active = ${window.V.active=="anaMenyu"} ?hidden=${window.V.sideBarMinimized}>Ana menyu</button>
 			<button @click=${e=>this.sideBarActivate("bugun")} ?active = ${window.V.active=="bugun"} ?hidden=${window.V.sideBarMinimized} active>Bugün</button>
+			<button @click=${e=>this.sideBarActivate("sifaris")} ?active = ${window.V.active=="sifaris"} ?hidden=${window.V.sideBarMinimized}>Sifariş</button>
 			<button @click=${e=>this.sideBarActivate("tarixce")} ?active = ${window.V.active=="tarixce"} ?hidden=${window.V.sideBarMinimized}>Tarixçə</button>
 			<button @click=${e=>this.sideBarActivate("yemekElavesi")} ?active = ${window.V.active=="yemekElavesi"} ?hidden=${window.V.sideBarMinimized}>Yemək əlavəsi</button>
 			<button @click=${e=>this.sideBarActivate("adminMenyu")} ?active = ${window.V.active=="adminMenyu"} ?hidden=${window.V.sideBarMinimized}>Admin menyu</button>

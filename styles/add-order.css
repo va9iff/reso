@@ -1,0 +1,35 @@
+add-order {
+/*	display: flex;*/
+/*	flex-direction: column;*/
+	display: block;
+	padding: 13px;
+}
+
+add-order *{
+	font-size: 17px;
+	margin: 4px;
+}
+
+add-order button {
+	padding: 14px;
+	border-radius: 4px;
+}
+
+add-order input[type="number"]{
+	border: none;
+	width: 70px;
+	border-radius: 5px;
+	padding: 13px;
+}
+
+add-order button.round{
+	border: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+add-order select{
+	padding: 13px;
+/*	margin: 4px 20px;*/
+	border-radius: 3px;
+}

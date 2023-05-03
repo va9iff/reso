@@ -12,7 +12,12 @@ class DailyCalc extends VLitElement {
 	constructor() {
 		super()
 		this.entries = window.data.today
-		// this.activeNum = 0
+		this.activeNum = null
+		if (window.toLastCalc) {
+			this.activeNum = this.entries.length - 1
+			this.entry = this.entries.at(-1)
+			window.toLastCalc = null
+		}
 	}
 
 	render() {
