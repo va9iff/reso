@@ -3,6 +3,6 @@ v-main {
 	width: 100%;
 	display: flex;
 	position: relative;
-	overflow: scroll;
+/*	overflow: scroll;*/
 	z-index: 999;
 }

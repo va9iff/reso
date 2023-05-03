@@ -2,8 +2,13 @@ food-menu{
 /*	background-color: cyan;*/
 	display: flex;
 	flex-direction: column;
+/*	height: inherit;*/
 }
 food-menu>.gradientBG{
+	position: sticky;
+	top: -100px;
+	height: 180px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -14,7 +19,8 @@ food-menu>.gradientBG{
 	gap: 10px;
 
 /*	width: 1173px;*/
-	height: 223px;
+/*	height: 223px;*/
+
 /*	left: 10px;*/
 /*	top: 52px;*/
 
@@ -23,15 +29,16 @@ food-menu>.gradientBG{
 }
 
 food-menu>.categories{
-	margin-top: -150px;
+	margin-top: -100px;
 	display: flex;
 	flex-direction: row;
 	padding: 20px 60px;
 	gap: 80px;
 /*	flex-wrap: wrap;*/
-	overflow-x: scroll;
+	overflow-x: auto;
 /*	margin-top: -30px;*/
-
+	position: sticky;
+	top: -5px;
 /*	align-items: center;*/
 /*	justify-content: center;*/
 }
@@ -47,7 +54,7 @@ food-menu>.categories>button{
 	gap: 10px;
 
 	width: 160px;
-	height: 160px;
+	height: 120px;
 	flex-grow: 3;
 
 	background: #F9F9F9;
@@ -112,8 +119,11 @@ food-menu>.categories>button[active]:after{
 	font-weight: 400;
 	font-size: 18px;
 	padding: 0 45px;
-/*	overflow-y: scroll;*/
+/*background-color: red;*/
+/*flex-grow: 1;*/
 /*	height: 200px; */ /*idea*/
+/*	overflow-y: scroll;*/
+/*	height: calc(100% - 300px);*/
 }
 
 .foodsList>p {

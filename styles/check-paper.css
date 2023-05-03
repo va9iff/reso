@@ -99,3 +99,9 @@ check-paper u{
 	right: 16px;
 	margin-right: 19px;
 }
+
+check-paper u[total]{
+	background-color: #ffffff;
+	border-radius: 15px;
+/*	box-shadow: 0 0 4px 4px #ffffff;*/
+}

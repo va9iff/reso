@@ -26,7 +26,7 @@ class CheckPaper extends VLitElement {
 				</p>
 				`
 			)}
-			<u>Cəmi: ${12.80}₼</u>
+			<u total>Cəmi: ${12.80}₼</u>
 		`
 	}
 }

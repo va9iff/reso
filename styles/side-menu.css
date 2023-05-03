@@ -1,20 +1,24 @@
 side-menu{
 	background-color: #0F172A;
 	color: #eeeeee;
-	width: 227px;
 /*	height: 400%;*/
 /*	min-height: 100vh;*/
 	padding: 36px 10px;
 	gap: 15px;
 /*	box-shadow: -800px 800px 0 800px #ff172A;*/
-	box-shadow: -800px 800px 0 800px #0F172A;
+/*	box-shadow: -800px 800px 0 800px #0F172A;*/
+	position: sticky;
 
 	display: flex;
 	flex-direction: column;
-	position: absolute;
+/*	position: absolute;*/
 	top: 0;
 	left: 0;
 	transition: 400ms;
+	width: 227px;
+/*	width: 122px;*/
+	z-index: 999999;
+	overflow-y: auto;
 }
 
 side-menu h3{
