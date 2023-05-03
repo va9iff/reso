@@ -51,6 +51,7 @@ class AddOrder extends VLitElement {
 	render(){
 		window.activeOrder = this.active
 		return html`
+		<div>
 			<select @change=${e => this.selectedFood = e.target.value}>
 					<option value="" ?selected = ${!this.selectedFood}>-Yemək Seçin-</option>
 				${window.data.foods.map(food=>html`
@@ -63,15 +64,14 @@ class AddOrder extends VLitElement {
 			<button class="round" @click=${e=>this.selectedCount++} ?disabled = ${!this.selectedFood}>+</button>
 			<br>
 			<button @click = ${this.add} ?disabled = ${!this.selectedFood}>Əlavə Et</button>
-			${
-				this.active.map(order=>html`<p>${order.name} ${order.count}x</p>`)
-			}
 			<br>
 			<button @click = ${this.addOrder} ?disabled = ${!this.active.length}>Çeki Əlavə Et</button>
 			<br>
 			<br>
 			<br>
 			<button @click = ${this.reset}>Çeki Sil</button>
+		</div>
+			<check-paper .entry=${{num: "0",items: this.active}}></check-paper>
 
 		`
 	}
