@@ -13,6 +13,12 @@ span[end]{
 	margin-left: auto;
 }
 
+*[center] {
+/*	text-align: center;*/
+	text-align: center;
+	background-color: red;
+}
+
 /**[flippedLights]{
 	filter: invert(100%) hue-rotate(180deg);
 }

@@ -28,6 +28,12 @@ food-menu>.gradientBG{
 	border-radius: 21px;
 }
 
+.content[sideMenuMinimized] food-menu{
+	transform: translateY(-90px);
+	transition: 950ms;
+/*	background-color: red;*/
+}
+
 food-menu>.categories{
 	margin-top: -100px;
 	display: flex;

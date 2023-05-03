@@ -21,10 +21,11 @@ daily-calc td{
 }
 
 daily-calc td[r]{
-	text-align: right
+	text-align: right;
 }
-daily-calc td[l]{
-	text-align: left
+daily-calc td[nums]{
+/*	text-align: left;*/
+/*	background-color: red;*/
 }
 
 
@@ -39,19 +40,19 @@ daily-calc tr[active]{
 
 }
 
-td[l]{
+td[nums]{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-daily-calc tr  td[l] span{
+daily-calc tr  td[nums] span{
 	transition: 800ms;
 	padding: 0px 18px;
 	border-radius: 3px;
 }
 
-daily-calc tr[active]  td[l] span{
+daily-calc tr[active]  td[nums] span{
 	transition: 200ms;
 	background-color: #171717;
 	color: #eee;

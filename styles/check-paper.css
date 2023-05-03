@@ -71,12 +71,24 @@ check-paper h3{
 	margin-bottom: 34px;
 }
 
+check-paper p:hover {
+/*	background-color: #ddd;*/
+	box-shadow: 0 2px 0 0 #333, 0 -2px 0 0 #333;
+/*	padding: 13px;*/
+/*	margin-top: -8px;*/
+/*	border-radius: 3px;*/
+/*	filter: invert(100%);*/
+transition-delay: 300ms;
+}
 check-paper p {
-	margin-left: 13px;
-	margin-right: 13px;
+	transition: 315ms;
+	box-shadow: 0 0px 0 0 #333, 0 0px 0 0 #333;
+/*	transition: 105ms;*/
+/*	margin-left: 13px;*/
+/*	margin-right: 13px;*/
+	padding: 0 13px;
 	margin-bottom: 27px;
 	display: flex;
-/*	background-color: yellowgreen;*/
 }
 
 check-paper{
