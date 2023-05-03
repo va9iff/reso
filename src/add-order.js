@@ -3,7 +3,7 @@ import { html, VLitElement } from "./vlit.js"
 let increment = (arr, obj) => {
 	if (arr.map(item=>item.name).includes(obj.name)){
 		// console.log("includes", obj)
-		arr[arr.map(item=>item.name).indexOf(obj.name)].count++
+		arr[arr.map(item=>item.name).indexOf(obj.name)].count+=obj.count
 	} else {
 		arr.push(obj)
 	}
@@ -58,20 +58,20 @@ class AddOrder extends VLitElement {
 					`)}
 			</select>
 			<br>
-			<button @click = ${this.add} ?disabled = ${!this.selectedFood}>Əlavə Et</button>
+			<button class="round" @click=${e=>this.selectedCount--} ?disabled = ${!this.selectedFood}>-</button>
+			<input type="number" @change=${e=>this.selectedCount=parseInt(e.target.value)} .value = ${this.selectedCount} ?disabled = ${!this.selectedFood}>
+			<button class="round" @click=${e=>this.selectedCount++} ?disabled = ${!this.selectedFood}>+</button>
 			<br>
-			<button class="round" @click=${e=>this.selectedCount--}>-</button>
-			<input type="number" .value = ${this.selectedCount}>
-			<button class="round" @click=${e=>this.selectedCount++}>+</button>
+			<button @click = ${this.add} ?disabled = ${!this.selectedFood}>Əlavə Et</button>
 			${
 				this.active.map(order=>html`<p>${order.name} ${order.count}x</p>`)
 			}
 			<br>
-			<button @click = ${this.reset}>Çeki Sil</button>
-			<br>
-			<br>
-			<br>
 			<button @click = ${this.addOrder} ?disabled = ${!this.active.length}>Çeki Əlavə Et</button>
+			<br>
+			<br>
+			<br>
+			<button @click = ${this.reset}>Çeki Sil</button>
 
 		`
 	}
