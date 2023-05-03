@@ -4,7 +4,7 @@ console.log(window.data)
 let food = (foodName)=>window.data.foods[window.data.foods.map(food=>food.name).indexOf(foodName)]
 setTimeout(()=>console.log(food("Coca Cola")))
 
-let deci2 = num => parseInt(num * 100) / 100
+let deci2 = num => Math.round(num * 100) / 100
 
 class CheckPaper extends VLitElement {
 	static properties = {

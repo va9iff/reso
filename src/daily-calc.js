@@ -1,6 +1,6 @@
 import { html, VLitElement } from "./vlit.js"
 
-let deci2 = num => parseInt(num * 100) / 100
+let deci2 = num => Math.round(num * 100) / 100
 
 import "./check-paper.js"
 class DailyCalc extends VLitElement {

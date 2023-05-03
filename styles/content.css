@@ -5,6 +5,7 @@
 	height: 100vh;
 	width: 100%;
 	overflow: auto;
+	background-color: #fff;
 }
 
 .content[sideMenuMinimized]{

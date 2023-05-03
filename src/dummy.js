@@ -114,6 +114,8 @@ export const data = {
 		{ name: "Coca Cola", price: 1.2, category: "İçkilər" },
 		{ name: "Ayran", price: 1.2, category: "İçkilər" },
 		{ name: "Sprite", price: 1.2, category: "İçkilər" },
+		{ name: "Tort", price: 10, category: "Desertlər" },
+		
 	],
 	"today": [
 	    {
@@ -738,7 +740,8 @@ export const data = {
 	                "name": "Çoban salatı",
 	                "price": 5,
 	                "count": 2
-	            }
+	            },
+
 	        ]
 	    }
 	]

@@ -26,10 +26,14 @@ class FoodMenu extends VLitElement{
 		<div class="gradientBG">
 		</div>
 		<div class="categories">
-			<button @click = ${e=>this.filter("Əsas yeməklər")} ?active = ${this.currentCatagory == "Əsas yeməklər"}>Əsas yeməklər</button>
-			<button @click = ${e=>this.filter("Salatlar")} ?active = ${this.currentCatagory == "Salatlar"}>Salatlar</button>
-			<button @click = ${e=>this.filter("İçkilər")} ?active = ${this.currentCatagory == "İçkilər"}>İçkilər</button>
-			<button @click = ${e=>this.filter("Desertlər")} ?active = ${this.currentCatagory == "Desertlər"}>Desertlər</button>
+			${Array.from(new Set(window.data.foods.map(food=>food.category))).map(
+				category=>html`<button 
+				@click = ${e=>this.filter(category)} ?active = ${this.currentCatagory == category}>${category}</button>`
+			// <button @click = ${e=>this.filter("Əsas yeməklər")} ?active = ${this.currentCatagory == "Əsas yeməklər"}>Əsas yeməklər</button>
+			// <button @click = ${e=>this.filter("Salatlar")} ?active = ${this.currentCatagory == "Salatlar"}>Salatlar</button>
+			// <button @click = ${e=>this.filter("İçkilər")} ?active = ${this.currentCatagory == "İçkilər"}>İçkilər</button>
+			// <button @click = ${e=>this.filter("Desertlər")} ?active = ${this.currentCatagory == "Desertlər"}>Desertlər</button>
+				)}
 		</div>
 		<div class="foodsList">
 			${this.list.map(food=>html`<p>${food.name} <span end>${food.price}</span>₼</p>`)}

@@ -12,3 +12,12 @@
 span[end]{
 	margin-left: auto;
 }
+
+/**[flippedLights]{
+	filter: invert(100%) hue-rotate(180deg);
+}
+
+*[flippedLights] button {
+	box-shadow: 0 0 0 0 #0000 !important;
+}
+*/
