@@ -30,6 +30,7 @@ food-menu>.gradientBG{
 
 .content[sideMenuMinimized] food-menu{
 	transform: translateY(-90px);
+/*	transition: 950ms;*/
 	transition: 950ms;
 /*	background-color: red;*/
 }

@@ -6,12 +6,33 @@
 	width: 100%;
 	overflow: auto;
 	background-color: #fff;
+
+	animation: 	unminimizeAnim 	350ms;
+}
+
+@keyframes unminimizeAnim{
+	from{
+		transform: 	translateX(-227px);
+	}
+	to {
+		transform: 	translateX(0);
+	} 
+}
+
+@keyframes minimizeAnim {
+	from{
+		transform: 	translateX(227px);
+	} to {
+		transform: 	translateX(0);
+	}
 }
 
 .content[sideMenuMinimized]{
-	margin-left: 0;
-	transition: 800ms;
+	animation: minimizeAnim 800ms;
+
+/*	margin-left: 0;*/
+/*	transition: 800ms;*/
 	padding-top: 90px;
-	margin-left: -90px;
+/*	margin-left: -90px;*/
 
 }
