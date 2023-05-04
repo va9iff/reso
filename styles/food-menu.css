@@ -173,8 +173,6 @@ food-menu>.categories>button[active]:after{
 	}
 }
 
-
-
 @media (height <= 400px) {
 	food-menu>.gradientBG{
 		position: unset;
