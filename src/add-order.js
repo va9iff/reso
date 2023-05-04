@@ -43,7 +43,7 @@ class AddOrder extends VLitElement {
 	}
 	addOrder() {
 		window.data.today.push({
-			num: Math.max(...window.data.today.map(order=>+order.num))+1,
+			num: Math.max(0,...window.data.today.map(order=>+order.num))+1,
 			items: this.active,
 		})
 		this.selectedFood = ""
@@ -96,7 +96,7 @@ class AddOrder extends VLitElement {
 					</button>
 					<button @click=${this.reset} deleter>Çeki Sil</button>
 				</div>
-				<check-paper .entry=${{ num: Math.max(...window.data.today.map(order=>+order.num))+1, items: this.active }}></check-paper>
+				<check-paper .entry=${{ num: Math.max(0, ...window.data.today.map(order=>+order.num))+1, items: this.active }}></check-paper>
 			</div>
 		`
 	}

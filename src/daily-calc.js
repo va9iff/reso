@@ -62,12 +62,12 @@ class DailyCalc extends VLitElement {
 
 							}
 							return result
-						}, { num: "X", items: [] })
+						}, { num: "X", items: [] }, [])
 						this.activeNum = "X"
 					}}>
 						<td nums><span>Cəm</span></td>
 						<td>
-							${this.entries.map(entry=>entry.items.reduce((result, item)=>deci2(result + deci2(item.count*item.price)), 0)).reduce((result, price)=>deci2(result + price))}₼
+							${this.entries.map(entry=>entry.items.reduce((result, item)=>deci2(result + deci2(item.count*item.price)), 0)).reduce((result, price)=>deci2(result + price), 0)}₼
 						</td>
 					</tr>
 				</table>
