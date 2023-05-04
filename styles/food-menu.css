@@ -172,3 +172,14 @@ food-menu>.categories>button[active]:after{
 		transform: scale(1);
 	}
 }
+
+
+
+@media (height <= 400px) {
+	food-menu>.gradientBG{
+		position: unset;
+		}
+	food-menu>.categories{
+		position: unset;
+	}
+}
