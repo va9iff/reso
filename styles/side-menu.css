@@ -61,6 +61,7 @@ side-menu[minimized]{
 	min-height: 0;
 	left: 	14px;
 	top: 	14px;
+/*	top: 	calc(100% - 14px - 90px);*/
 
 /*	height: 90px;*/
 /*	background-color: #fff0;*/

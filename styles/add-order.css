@@ -10,15 +10,31 @@ add-order *{
 }
 
 add-order button {
-	padding: 14px;
+	padding: 7px 10px;
 	border-radius: 4px;
+	background-color: #eee;
+/*	transition: 200ms;*/
 }
-
+add-order button:hover {
+/*	box-shadow: 0 0 0 3px #444;*/
+	background-color: #dadada;
+}
+add-order button:disabled {
+	box-shadow: none;
+/*	display: none;*/
+/*	opacity: 0;*/
+/*transform: scale(0.8);*/
+/*font-size: 0;*/
+}
 add-order input[type="number"]{
 	border: none;
 	width: 70px;
 	border-radius: 5px;
 	padding: 13px;
+	transition: 300ms;
+}
+add-order input[type="number"]:focus{
+	width: 100px;
 }
 
 add-order button.round{
@@ -26,9 +42,65 @@ add-order button.round{
 	width: 40px;
 	height: 40px;
 	border-radius: 20px;
+
+	transition: 120ms;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+add-order button.round:hover{
+	background-color: #222;
+	transform: scale(1.1);
+	color: #eee;
+}
+
+add-order *[counterAnimed]{
+	animation: counterAnim 800ms;
+	background-color: red;
+}
+@keyframes counterAnim{
+	from{
+		transform: translateY(-10px);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+
+
+add-order button.round:active{
+	transform: scale(1.4);
+
+}
+
 add-order select{
 	padding: 13px;
 /*	margin: 4px 20px;*/
 	border-radius: 3px;
+}
+
+
+add-order .foods button{
+	border: none;
+}
+
+add-order .buttons button{
+	padding: 14px;
+}
+
+*[deleter]:hover{
+	background-color: #f44;
+}
+
+add-order .buttons{
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	align-items: center;
+}
+
+add-order .addOrderButton{
+	margin-left: auto;
 }

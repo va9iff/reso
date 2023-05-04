@@ -1,4 +1,4 @@
-import {html, css, LitElement, classMap} from "./lit.js"
+import {html, css, LitElement, classMap, ref} from "./lit.js"
 
 class VLitElement extends LitElement {
 	createRenderRoot() {
